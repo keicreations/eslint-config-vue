@@ -1,6 +1,6 @@
 {
   "name": "@keicreations/eslint-config-vue",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Kei Creations ESLint config for Vue and Nuxt",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
     "url": "https://github.com/keicreations/eslint-config-vue/issues"
   },
   "homepage": "https://github.com/keicreations/eslint-config-vue#readme",
-  "devDependencies": {
+  "dependencies": {
     "eslint-config-hardcore": "^47.0.1",
     "eslint-plugin-putout": "^23.5.0",
     "eslint-plugin-tailwindcss": "^3.18.0",
