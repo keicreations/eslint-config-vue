@@ -1,0 +1,29 @@
+{
+  "name": "@keicreations/eslint-config-vue",
+  "version": "0.0.1",
+  "description": "Kei Creations ESLint config for Vue and Nuxt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keicreations/eslint-config-vue.git"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "vue",
+    "nuxt",
+    "kei",
+    "keicreations"
+  ],
+  "author": "Alex Kramer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keicreations/eslint-config-vue/issues"
+  },
+  "homepage": "https://github.com/keicreations/eslint-config-vue#readme",
+  "devDependencies": {
+    "eslint-config-hardcore": "^47.0.1",
+    "eslint-plugin-putout": "^23.5.0",
+    "eslint-plugin-tailwindcss": "^3.18.0",
+    "svelte": "^5.19.4"
+  }
+}
