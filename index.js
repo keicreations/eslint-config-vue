@@ -2,7 +2,7 @@ module.exports = {
     "extends": ["hardcore", "hardcore/ts", "hardcore/vue"],
     "plugins": ["tailwindcss"],
     "rules": {
-        "vue/no-v-html": "off",
+        "vue/no-v-html": "warn",
         "tailwindcss/classnames-order": "error",
         "tailwindcss/enforces-negative-arbitrary-values": "error",
         "tailwindcss/enforces-shorthand": "error",
@@ -28,8 +28,6 @@ module.exports = {
             }
         ],
         "vue/no-console": "warn",
-        "vue/require-macro-variable-name": "off",
-        "vue/require-typed-ref": "off",
         "@typescript-eslint/naming-convention": "off",
         "camelcase": "off",
         "vue/v-on-handler-style": "off",
