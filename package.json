@@ -1,6 +1,6 @@
 {
   "name": "@keicreations/eslint-config-vue",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Kei Creations ESLint config for Vue and Nuxt",
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
     "kei",
     "keicreations"
   ],
-  "author": "Alex Kramer",
+  "author": "Alex Kramer <alex@keicreations.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/keicreations/eslint-config-vue/issues"

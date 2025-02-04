@@ -36,14 +36,22 @@ module.exports = {
         "@typescript-eslint/prefer-destructuring": "off",
         "import/no-duplicates": "off",
         "no-duplicate-imports": "off",
-        "putout/putout": "off"
+        "putout/putout": "off",
+        "@stylistic/max-len": "off",
+        "no-extra-boolean-cast": "off"
     },
     "overrides": [
         {
-            "files": ["plugins/*.ts"],
+            "files": ["**/plugins/*.ts"],
             "rules": {
                 "total-functions/no-unsafe-readonly-mutable-assignment": "off",
                 "no-param-reassign": "off"
+            }
+        },
+        {
+            "files": ["**/middleware/*.ts"],
+            "rules": {
+                "consistent-return": "off",
             }
         }
     ]
