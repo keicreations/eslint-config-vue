@@ -38,7 +38,8 @@ module.exports = {
         "no-duplicate-imports": "off",
         "putout/putout": "off",
         "@stylistic/max-len": "off",
-        "no-extra-boolean-cast": "off"
+        "no-extra-boolean-cast": "off",
+        "etc/no-misused-generics": "warn"
     },
     "overrides": [
         {
