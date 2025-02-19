@@ -1,4 +1,7 @@
 module.exports = {
+    "parserOptions": {
+        "project": true
+    },
     "extends": ["hardcore", "hardcore/ts", "hardcore/vue"],
     "plugins": ["tailwindcss"],
     "rules": {
