@@ -40,7 +40,8 @@ module.exports = {
         "@stylistic/max-len": "off",
         "no-extra-boolean-cast": "off",
         "etc/no-misused-generics": "off",
-        "no-magic-numbers": ["error", { "ignore": [-1, 0, 1] }]
+        "no-magic-numbers": ["error", { "ignore": [-1, 0, 1] }],
+        "@typescript-eslint/no-magic-numbers": ["error", { "ignore" : [-1, 0, 1] }]
     },
     "overrides": [
         {
