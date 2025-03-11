@@ -3,6 +3,7 @@ module.exports = {
     "plugins": ["tailwindcss"],
     "rules": {
         "vue/no-v-html": "warn",
+        "sonar/no-vue-bypass-sanitization": "warn",
         "tailwindcss/classnames-order": "error",
         "tailwindcss/enforces-negative-arbitrary-values": "error",
         "tailwindcss/enforces-shorthand": "error",
