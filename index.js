@@ -31,7 +31,6 @@ module.exports = {
         "@typescript-eslint/no-magic-numbers": ["error", {"ignore": [-1, 0, 1]}],
         "vue/v-on-handler-style": ["error", ["method", "inline"]],
 
-
         "vue/no-v-html": "warn",
         "vue/no-console": "warn",
         "@typescript-eslint/naming-convention": "warn",
