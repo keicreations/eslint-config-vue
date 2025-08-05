@@ -34,7 +34,7 @@ module.exports = {
 
         "vue/no-v-html": "warn",
         "vue/no-console": "warn",
-        "@typescript-eslint/naming-convention": ["error",
+        "@typescript-eslint/naming-convention": ["warn",
             {
                 "selector": "default",
                 "format": ["strictCamelCase"]
