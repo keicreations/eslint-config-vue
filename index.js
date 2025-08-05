@@ -1,13 +1,15 @@
 module.exports = {
-    "extends": ["hardcore", "hardcore/ts", "hardcore/vue"],
-    "plugins": ["tailwindcss"],
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "project": "./tsconfig.json",
+        "extraFileExtensions": [
+            ".vue",
+            ".json"
+        ]
+    },
+    "extends": ["hardcore", "hardcore/ts", "hardcore/vue",],
     "rules": {
-        "tailwindcss/classnames-order": "error",
-        "tailwindcss/enforces-negative-arbitrary-values": "error",
-        "tailwindcss/enforces-shorthand": "error",
-        "tailwindcss/migration-from-tailwind-2": "error",
-        "tailwindcss/no-contradicting-classname": "error",
-        "tailwindcss/no-unnecessary-arbitrary-value": "error",
         "eslint-comments/require-description": "error",
         "vue/block-order": [
             "error",
@@ -24,15 +26,13 @@ module.exports = {
             }
         ],
         "func-style": ["error", "expression"],
-        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-        "no-magic-numbers": ["error", { "ignore": [-1, 0, 1] }],
-        "@typescript-eslint/no-magic-numbers": ["error", { "ignore" : [-1, 0, 1] }],
-        "vue/v-on-handler-style": ["error", ["method","inline"]],
+        "no-plusplus": ["error", {"allowForLoopAfterthoughts": true}],
+        "no-magic-numbers": ["error", {"ignore": [-1, 0, 1]}],
+        "@typescript-eslint/no-magic-numbers": ["error", {"ignore": [-1, 0, 1]}],
+        "vue/v-on-handler-style": ["error", ["method", "inline"]],
 
 
         "vue/no-v-html": "warn",
-        "sonar/no-vue-bypass-sanitization": "warn",
-        "tailwindcss/no-arbitrary-value": "warn",
         "vue/no-console": "warn",
         "@typescript-eslint/naming-convention": "warn",
         "camelcase": "warn",
@@ -41,17 +41,7 @@ module.exports = {
         "@typescript-eslint/consistent-type-assertions": "warn",
         "import/no-unresolved": "warn",
         "sonarjs/elseif-without-else": "warn",
-        "sonar/no-clear-text-protocols": "warn",
         "require-atomic-updates": "warn",
-        "tailwindcss/no-custom-classname": [
-            "warn",
-            {
-                "whitelist": [
-                    "pi\\-.+",
-                    "pi"
-                ]
-            }
-        ],
 
         "@typescript-eslint/prefer-readonly-parameter-types": "off",
         "vue/static-class-names-order": "off",
@@ -69,9 +59,17 @@ module.exports = {
         "total-functions/no-unsafe-readonly-mutable-assignment": "off",
         "no-continue": "off",
         "no-undef-init": "off",
-
     },
     "overrides": [
+        {
+            "files": [
+                "**/*.js",
+                "**/*.json"
+            ],
+            "parserOptions": {
+                "project": null
+            }
+        },
         {
             "files": ["**/plugins/*.ts"],
             "rules": {
@@ -87,40 +85,17 @@ module.exports = {
         },
         {
             "files": [
-                "*.ts",
-                ".*.ts",
-                "*.tsx",
-                "*.mts",
-                ".*.mts",
-                "*.cts",
-                ".*.cts",
-                "*.vue"
+                "**/server/**/*.ts",
+                "**/server/**/.*.ts",
+                "**/server/**/*.tsx",
+                "**/server/**/*.mts",
+                "**/server/**/.*.mts",
+                "**/server/**/*.cts",
+                "**/server/**/.*.cts"
             ],
             "parserOptions": {
-                "project": "./tsconfig.json"
-            }
-        },
-        {
-            "files": [
-                "server/**/*.ts",
-                "server/**/.*.ts",
-                "server/**/*.tsx",
-                "server/**/*.mts",
-                "server/**/.*.mts",
-                "server/**/*.cts",
-                "server/**/.*.cts"
-            ],
-            "parserOptions": {
-                "project": "./server/tsconfig.json"
-            }
-        },
-        {
-            "files": [
-                "*.js",
-                "*.json"
-            ],
-            "parserOptions": {
-                "project": null
+                "project": "tsconfig.json",
+                "tsconfigRootDir": process.cwd() + "/server/"
             }
         },
     ]
