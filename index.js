@@ -30,10 +30,53 @@ module.exports = {
         "no-magic-numbers": ["error", {"ignore": [-1, 0, 1]}],
         "@typescript-eslint/no-magic-numbers": ["error", {"ignore": [-1, 0, 1]}],
         "vue/v-on-handler-style": ["error", ["method", "inline"]],
+        "@shopify/prefer-early-return": "error",
 
         "vue/no-v-html": "warn",
         "vue/no-console": "warn",
-        "@typescript-eslint/naming-convention": "warn",
+        "@typescript-eslint/naming-convention": ["error",
+            {
+                "selector": "default",
+                "format": ["strictCamelCase"]
+            },
+            {
+                "selector": "variable",
+                "format": ["strictCamelCase", "UPPER_CASE"],
+            },
+            {
+                "selector": ["function", "import"],
+                "format": ["strictCamelCase", "StrictPascalCase"]
+            },
+            {
+                "selector": ["enumMember"],
+                "format": ["StrictPascalCase"]
+            },
+            {
+                "selector": ["typeLike"],
+                "format": ["PascalCase"]
+            },
+            {
+                "selector": ["variable", "parameter", "accessor"],
+                "types": ["boolean"],
+                "format": ["PascalCase"],
+                "prefix": ["is", "has", "are", "can", "should", "did", "will"]
+            },
+            {
+                "selector": ["objectLiteralProperty"],
+                "format": null,
+                "modifiers": ["requiresQuotes"]
+            },
+            {
+                "selector": ["property"],
+                "types": ["boolean"],
+                "format": ["PascalCase"],
+                "prefix": ["is", "has", "are", "can", "should", "did", "will"],
+                "filter": {
+                    "regex": "^(allowfullscreen|allowFullScreen|async|autofocus|autoFocus|autoplay|autoPlay|checked|defaultChecked|contenteditable|contentEditable|controls|default|defer|disabled|draggable|formnovalidate|formNoValidate|hidden|inert|ismap|itemscope|itemScope|loop|multiple|muted|nomodule|noModule|novalidate|noValidate|open|playsinline|playsInline|readonly|readOnly|required|reversed|selected|spellcheck|spellCheck)$",
+                    "match": false
+                }
+            }
+        ],
         "camelcase": "warn",
         "default-case": "warn",
         "import/no-extraneous-dependencies": "warn",
