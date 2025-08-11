@@ -125,7 +125,8 @@ module.exports = {
         {
             "files": ["**/middleware/*.ts"],
             "rules": {
-                "consistent-return": "off"
+                "consistent-return": "off",
+                "no-param-reassign": "off"
             }
         },
         {
