@@ -1,6 +1,6 @@
 {
   "name": "@keicreations/eslint-config-vue",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Kei Creations ESLint config for Vue and Nuxt",
   "repository": {
     "type": "git",

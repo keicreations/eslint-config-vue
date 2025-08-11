@@ -102,6 +102,8 @@ module.exports = {
         "total-functions/no-unsafe-readonly-mutable-assignment": "off",
         "no-continue": "off",
         "no-undef-init": "off",
+        "perfectionist/sort-modules": "off",
+        "perfectionist/sort-switch-case": "off"
     },
     "overrides": [
         {
