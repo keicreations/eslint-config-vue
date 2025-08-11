@@ -84,6 +84,7 @@ module.exports = {
         "import/no-unresolved": "warn",
         "sonarjs/elseif-without-else": "warn",
         "require-atomic-updates": "warn",
+        "sonarjs/no-clear-text-protocols": "warn",
 
         "@typescript-eslint/prefer-readonly-parameter-types": "off",
         "vue/static-class-names-order": "off",
