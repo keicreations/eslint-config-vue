@@ -103,7 +103,8 @@ module.exports = {
         "no-continue": "off",
         "no-undef-init": "off",
         "perfectionist/sort-modules": "off",
-        "perfectionist/sort-switch-case": "off"
+        "perfectionist/sort-switch-case": "off",
+        "sonarjs/no-one-iteration-loop": "off"
     },
     "overrides": [
         {
