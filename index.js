@@ -31,6 +31,20 @@ module.exports = {
         "@typescript-eslint/no-magic-numbers": ["error", {"ignore": [-1, 0, 1]}],
         "vue/v-on-handler-style": ["error", ["method", "inline"]],
         "@shopify/prefer-early-return": "error",
+        "vue/define-macros-order": [
+            "error",
+            {
+                "order": [
+                    "definePage",
+                    "defineOptions",
+                    "defineModel",
+                    "defineProps",
+                    "defineEmits",
+                    "defineSlots"
+                ],
+                "defineExposeLast": false
+            }
+        ],
 
         "vue/no-v-html": "warn",
         "vue/no-console": "warn",
